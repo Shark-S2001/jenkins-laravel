@@ -4,7 +4,6 @@ pipeline {
         stage("Build") {
             steps {
                 sh curl -sS https://getcomposer.org/installer | php56
-                sh 'composer install'
                 sh 'composer --version'
                 sh 'cp .env.example .env'
                 sh 'php artisan key:generate'
